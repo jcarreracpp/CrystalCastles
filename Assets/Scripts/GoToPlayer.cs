@@ -5,6 +5,7 @@ public class GoToPlayer : MonoBehaviour
 {
     Transform player;               // Reference to the player's position.
     UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
+    public float stopDistance;
 
 
     void Awake()
@@ -12,12 +13,19 @@ public class GoToPlayer : MonoBehaviour
         // Set up the references.
         player = GameObject.Find("Player").transform;
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        nav.SetDestination(player.position);
     }
 
 
     void Update()
     {
-            nav.SetDestination(player.position);
+        if (Vector3.Distance(this.transform.position, player.transform.position) <= stopDistance)
+        {
+            nav.enabled = false;
+        }
+        else
+        {
             nav.enabled = true;
+        }
     }
 }

@@ -43,4 +43,9 @@ public class Player : MonoBehaviour {
 		get{ return health;}
 		set{ }
 	}
+	
+    public void modifyHealth(int i)
+    {
+        health.CurrentVal += i;
+    }
 }

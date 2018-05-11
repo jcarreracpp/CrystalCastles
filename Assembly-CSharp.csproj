@@ -59,7 +59,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BarScript.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GoToPlayer.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ProjectileAttackWithinRange.cs" />
+    <Compile Include="Assets\Scripts\Stat.cs" />
+    <Compile Include="Assets\Scripts\TestProjectile.cs" />
+    <Compile Include="Assets\Scripts\WaveSpawn.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/jsupr/Documents/Unity Projects/Crystal Castles Game Dev/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

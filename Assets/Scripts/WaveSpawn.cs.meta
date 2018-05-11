@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ba9c86376c31cf149a3983515c9b27ac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemy: {fileID: 1685433791795756, guid: ab2dea97cb0d81443be5df40e457beab, type: 2}
+  - elf: {fileID: 1498830142177386, guid: 4d21171132b59414ea242e62bb7b316b, type: 2}
+  - orc: {fileID: 1198497045772912, guid: 04f29d0172040ff44a7948ac695e1117, type: 2}
+  - farmer: {fileID: 1603270139091538, guid: fd52dbb70fe09544f8e08bbfa05ee1b3, type: 2}
+  - knight: {fileID: 1480466396665656, guid: 7dbf18b6e3793a3419acb3fcaa5693eb, type: 2}
+  - txtScreen: {fileID: 1075102055701380, guid: a4360968bdb4bbe479fcf5b70cfeec33,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
