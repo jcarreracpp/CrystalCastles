@@ -37,4 +37,10 @@ public class Player : MonoBehaviour {
 			Mana.CurrentVal += 1;
 		}
 	}
+
+	public Stat Health
+	{
+		get{ return health;}
+		set{ }
+	}
 }
