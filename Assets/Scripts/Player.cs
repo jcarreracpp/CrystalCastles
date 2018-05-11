@@ -37,4 +37,8 @@ public class Player : MonoBehaviour {
 			Mana.CurrentVal += 1;
 		}
 	}
+    public void modifyHealth(int i)
+    {
+        health.CurrentVal += i;
+    }
 }
