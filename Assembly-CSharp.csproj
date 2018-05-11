@@ -63,14 +63,8 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GoToPlayer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\ProjectileAttackWithinRange.cs" />
-    <Compile Include="Assets\Scripts\Stat.cs" />
-    <Compile Include="Assets\Scripts\TestProjectile.cs" />
-=======
     <Compile Include="Assets\Scripts\Stat.cs" />
     <Compile Include="Assets\Scripts\WaveSpawn.cs" />
->>>>>>> d813e5231c1a5358770025407dbbc3df9cd35bd8
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/bryc3/OneDrive/Desktop/CrystalCastles/CrystalCastles/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
