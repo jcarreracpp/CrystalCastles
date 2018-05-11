@@ -13,6 +13,8 @@ public class WaveSpawn : MonoBehaviour {
     bool started = false;
     int i = 0;
     int waveType;
+    
+
 
     // Use this for initialization
     void Start () {
@@ -26,7 +28,8 @@ public class WaveSpawn : MonoBehaviour {
         enemies.Add(knight);
         enemies.Add(elf);
         enemies.Add(orc);
-
+       
+        
 
 
     }
@@ -44,8 +47,7 @@ public class WaveSpawn : MonoBehaviour {
         {
             started = true;
         }
-
-
+        
 
 
 
