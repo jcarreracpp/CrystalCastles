@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -661,10 +661,16 @@ MonoBehaviour:
   enemy: {fileID: 1685433791795756, guid: ab2dea97cb0d81443be5df40e457beab, type: 2}
   elf: {fileID: 1498830142177386, guid: 4d21171132b59414ea242e62bb7b316b, type: 2}
   orc: {fileID: 1198497045772912, guid: 04f29d0172040ff44a7948ac695e1117, type: 2}
-  farmer: {fileID: 1603270139091538, guid: fd52dbb70fe09544f8e08bbfa05ee1b3, type: 2}
-  knight: {fileID: 1480466396665656, guid: 7dbf18b6e3793a3419acb3fcaa5693eb, type: 2}
-  enemies: []
+  farmerHoe: {fileID: 1604885736335114, guid: d271dfd60f6081f4a8540259455fce10, type: 2}
+  farmerPitchfork: {fileID: 1514709615045124, guid: fe2b192a2e9482148aeb82bb95daeefb,
+    type: 2}
+  farmerScythe: {fileID: 1642286534745674, guid: 8d01bc16e721dee4eb7a8591a023491c,
+    type: 2}
+  knightSheildSword: {fileID: 1956544174588666, guid: 0371b5c83ff50d54b88fb7becddeb0a6,
+    type: 2}
   spawnPoints: []
+  maxEnemyCount: 20
+  enemies: []
 --- !u!136 &723270588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -731,7 +737,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775952166
 GameObject:
@@ -961,7 +967,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4231955438562678, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
       propertyPath: m_IsActive
@@ -1415,7 +1421,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360578120
 GameObject:
@@ -2036,7 +2042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1768744386
 GameObject:
