@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 195298127667670840}
   m_Layer: 0
   m_Name: Farmer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopDistance: 0
 --- !u!195 &195298127667670840
 NavMeshAgent:
   m_ObjectHideFlags: 1
