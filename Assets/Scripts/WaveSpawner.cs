@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour {
 
-	public enum SpawnState {SPAWNING, WAITING, COUNTING};
+	public enum SpawnState {SPAWNING, WAITING};
 
 	[System.Serializable]
 	public class Wave
@@ -15,20 +15,23 @@ public class WaveSpawner : MonoBehaviour {
 		public float rate;
 	}
 
-
-	public Wave[] waves;
 	private int nextWave = 0;
+	public float rate;
+	private int spawnCount = 10;
+	private float searchCountdown = 1f;
+	//Shop needs to change this back to false to resume wave
+	public bool pause = false;
 
-
+	//Enemies by factions
+	public Transform[] farmers;
+	public Transform[] knights;
+	public Transform[] elves;
+	public Transform[] orcs;
+	public Transform[] dragons;
+	//Spawn Points
 	public Transform[] spawnPoints;
 
-
-	public float timeBetweenWaves = 5f;
-	private float waveCountdown;
-
-	private float searchCountdown = 1f;
-
-	public SpawnState state = SpawnState.COUNTING;
+	public SpawnState state = SpawnState.SPAWNING;
 
 
 	void Start ()
@@ -37,8 +40,6 @@ public class WaveSpawner : MonoBehaviour {
 		{
 			Debug.LogError ("No spawn points reference.");
 		}
-
-		waveCountdown = timeBetweenWaves;
 	}
 		
 	void Update()
@@ -52,38 +53,29 @@ public class WaveSpawner : MonoBehaviour {
 				return;
 			}
 		}
-
-
-		if(waveCountdown <= 0)
+			
+		if(pause == false)
 		{
 			if (state != SpawnState.SPAWNING) 
 			{
 				// Start spawning wave
-				StartCoroutine(SpawnWave(waves[nextWave]));
+				StartCoroutine(SpawnWave(nextWave));
 			} 
 		} 
-		else 
-		{
-			waveCountdown -= Time.deltaTime;
-		}
 			
 	}
 
 	void WaveCompleted ()
 	{
 		Debug.Log ("Wave Copmleted!");
-
-		state = SpawnState.COUNTING;
-		waveCountdown = timeBetweenWaves;
-
-		if (nextWave + 1 > waves.Length - 1) {
-			nextWave = 0;
-			Debug.Log ("ALL WAVES COMPLETE! Looping...");
-		} else {
-			nextWave++;
-		}
+		//pause = true;
+		Debug.Log ("Spawn Paused. Time to open Shop.");
+		//A method that interacts and opens the shop
+		//...
+		nextWave++;
 	}
 
+	//Checks every searchCountdown (set to 1, so every 1 second)
 	bool EnemyIsAlive()
 	{
 		searchCountdown -= Time.deltaTime;
@@ -97,28 +89,102 @@ public class WaveSpawner : MonoBehaviour {
 		}
 		return true;
 	}
-
-	IEnumerator SpawnWave (Wave _wave)
+		
+	//Logic behind spawns
+	IEnumerator SpawnWave (int nextWave)
 	{
-		Debug.Log ("Spawning Wave: " + _wave.name);
+		Debug.Log ("Spawning Wave: " + nextWave);
 		state = SpawnState.SPAWNING;
 
 		// Spawn
-		for(int i = 0; i < _wave.count; i++)
+		for(int i = 0; i < spawnCount; i++)
 		{
-			SpawnEnemy (_wave.enemy);
-			yield return new WaitForSeconds ( 1f/_wave.rate );
+			float temp = Random.Range (0.0f, 1.0f);
+
+			//Changing the percent chance of spawning type of enemy.
+			if (nextWave > 8) {
+				/*
+				farmerChance = .1;
+				knightChance = .2;
+				elfChance = .2;
+				orcChance = .3;
+				dragonChance = .2;
+				*/
+			} else if (nextWave > 6) {
+				/*
+				farmerChance = .3;
+				knightChance = .2;
+				elfChance = .3;
+				orcChance = .2;
+				dragonChance = 0;
+				*/
+				if (1 > temp && temp >= .8) {
+					SpawnEnemy (orcs[Random.Range(0,3)]);
+				} else if (.8 > temp && temp >= .5) {
+					SpawnEnemy (elves[Random.Range(0,3)]);
+				} else if (.5 > temp && temp > .3) {
+					SpawnEnemy (knights[Random.Range(0,3)]);
+				} else {
+					SpawnEnemy (farmers[Random.Range(0,3)]);
+				}
+			} else if (nextWave > 4) {
+				/*
+				farmerChance = .5;
+				knightChance = .3;
+				elfChance = .2;
+				orcChance = 0;
+				dragonChance = 0;
+				*/
+
+				if (temp > .8) {
+					SpawnEnemy (elves[Random.Range(0,3)]);
+				} else if (temp > .7) {
+					SpawnEnemy (knights[Random.Range(0,3)]);
+				} else {
+					SpawnEnemy (farmers[Random.Range(0,3)]);
+				}
+			} else if (nextWave > 2) {
+				/*
+				farmerChance = .7;
+				knightChance = .3;
+				elfChance = 0;
+				orcChance = 0;
+				dragonChance = 0;
+				*/
+				if (temp > .7) {
+					SpawnEnemy (knights[Random.Range(0,3)]);
+				} else {
+					SpawnEnemy (farmers[Random.Range(0,3)]);
+				}
+			} else {
+				/*
+				farmerChance = 1;
+				knightChance = 0;
+				elfChance = 0;
+				orcChance = 0;
+				dragonChance = 0;
+				*/
+				SpawnEnemy (farmers[Random.Range(0,3)]);
+			}
+
+			yield return new WaitForSeconds ( 1f/rate );
+		}
+
+		//Every 2 rounds, we spawn 3 more.
+		if(nextWave%2 == 0 && nextWave != 0){
+			Debug.Log ("Spawning 3 more units");
+			spawnCount += 3;
 		}
 
 		state = SpawnState.WAITING;
 
 		yield break;
 	}
-
+		
 	void SpawnEnemy (Transform _enemy)
 	{
 		//Spawn enemy
-		Debug.Log("Spawning Enemy: " + _enemy.name);
+		Debug.Log("Spawning Enemy");
 
 		Transform _sp = spawnPoints [Random.Range(0,spawnPoints.Length)];
 		Instantiate(_enemy, _sp.position, _sp.rotation);
