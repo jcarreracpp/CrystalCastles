@@ -33,9 +33,14 @@ public class WaveSpawner : MonoBehaviour {
 
 	public SpawnState state = SpawnState.SPAWNING;
 
+	//responsible for connecting with GameManager and calling a method
+	public GameObject gameManager;
+	private GameManager gameManagerScript;
 
 	void Start ()
 	{
+		gameManagerScript = gameManager.GetComponent<GameManager> ();
+		setEnemiesRemainingTextMax ();
 		if(spawnPoints.Length == 0)
 		{
 			Debug.LogError ("No spawn points reference.");
@@ -59,6 +64,7 @@ public class WaveSpawner : MonoBehaviour {
 			if (state != SpawnState.SPAWNING) 
 			{
 				// Start spawning wave
+				setEnemiesRemainingTextMax ();
 				StartCoroutine(SpawnWave(nextWave));
 			} 
 		} 
@@ -175,7 +181,6 @@ public class WaveSpawner : MonoBehaviour {
 			Debug.Log ("Spawning 3 more units");
 			spawnCount += 3;
 		}
-
 		state = SpawnState.WAITING;
 
 		yield break;
@@ -188,6 +193,10 @@ public class WaveSpawner : MonoBehaviour {
 
 		Transform _sp = spawnPoints [Random.Range(0,spawnPoints.Length)];
 		Instantiate(_enemy, _sp.position, _sp.rotation);
+	}
+
+	public void setEnemiesRemainingTextMax(){
+		gameManagerScript.setEnemiesRemainingMax (spawnCount);
 	}
 
 }

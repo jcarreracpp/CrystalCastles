@@ -75,4 +75,15 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene("ShopScene");
     }
+
+
+	//This will be called by WaveSpawner at the start of rounds
+	public void setEnemiesRemainingMax(int newMax){
+		EnemyCount = newMax;
+	}
+		
+	//This will be called by enemies when their hp reaches < 0
+	public void decrementEnemiesRemaining(){
+		EnemyCount--;
+	}
 }
