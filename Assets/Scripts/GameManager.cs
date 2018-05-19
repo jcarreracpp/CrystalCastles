@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -69,4 +70,9 @@ public class GameManager : MonoBehaviour {
 			this.enemiesRemainingText.text = "Enemies Remaining: " + value.ToString ();
 		}
 	}
+
+    public void gotoShop()
+    {
+        SceneManager.LoadScene("ShopScene");
+    }
 }
