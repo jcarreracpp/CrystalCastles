@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: ba9c86376c31cf149a3983515c9b27ac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemy: {fileID: 1685433791795756, guid: ab2dea97cb0d81443be5df40e457beab, type: 2}
+  - elf: {fileID: 1498830142177386, guid: 4d21171132b59414ea242e62bb7b316b, type: 2}
+  - orcMelee: {fileID: 1909235016255248, guid: 2cd95e0fe57c1c54fbd52253de258886, type: 2}
+  - orcThrowing: {fileID: 1372024528242374, guid: 448cb5272437f61478a335d8317a8ecd,
+      type: 2}
+  - orcBrute: {fileID: 1954979532453866, guid: 111f868bb8648ba44acff06455921556, type: 2}
+  - farmerHoe: {fileID: 1604885736335114, guid: d271dfd60f6081f4a8540259455fce10,
+      type: 2}
+  - farmerPitchfork: {fileID: 1514709615045124, guid: fe2b192a2e9482148aeb82bb95daeefb,
+      type: 2}
+  - farmerScythe: {fileID: 1642286534745674, guid: 8d01bc16e721dee4eb7a8591a023491c,
+      type: 2}
+  - knightSheildSword: {fileID: 1956544174588666, guid: 0371b5c83ff50d54b88fb7becddeb0a6,
+      type: 2}
+  - knightLance: {fileID: 1801063574437088, guid: a6ff3496f4fb65f4f90baf8c86a1d76d,
+      type: 2}
+  - knightCrossbow: {fileID: 1288359123035770, guid: 6b83d837dcf9eb44aaa6df02aa48fc10,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
