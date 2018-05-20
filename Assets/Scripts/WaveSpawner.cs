@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour {
 
@@ -33,6 +34,12 @@ public class WaveSpawner : MonoBehaviour {
 
 	public SpawnState state = SpawnState.SPAWNING;
 
+	public GameObject waveText;
+
+	//updates portrait and text
+	public GameObject startRoundBox;
+	private StartRoundBox startRoundBoxScript;
+
 	//responsible for connecting with GameManager and calling a method
 	public GameObject gameManager;
 	private GameManager gameManagerScript;
@@ -40,7 +47,9 @@ public class WaveSpawner : MonoBehaviour {
 	void Start ()
 	{
 		gameManagerScript = gameManager.GetComponent<GameManager> ();
+		startRoundBoxScript = startRoundBox.GetComponent<StartRoundBox> ();
 		setEnemiesRemainingTextMax ();
+		waveText.GetComponent<Text>().text = "Wave: " + (nextWave+1);
 		if(spawnPoints.Length == 0)
 		{
 			Debug.LogError ("No spawn points reference.");
@@ -79,6 +88,7 @@ public class WaveSpawner : MonoBehaviour {
 		//A method that interacts and opens the shop
 		//...
 		nextWave++;
+		waveText.GetComponent<Text>().text = "Wave: " + (nextWave+1);
 	}
 
 	//Checks every searchCountdown (set to 1, so every 1 second)
@@ -108,7 +118,7 @@ public class WaveSpawner : MonoBehaviour {
 			float temp = Random.Range (0.0f, 1.0f);
 
 			//Changing the percent chance of spawning type of enemy.
-			if (nextWave > 8) {
+			if (nextWave > 4) {
 				/*
 				farmerChance = .1;
 				knightChance = .2;
@@ -116,7 +126,9 @@ public class WaveSpawner : MonoBehaviour {
 				orcChance = .3;
 				dragonChance = .2;
 				*/
-			} else if (nextWave > 6) {
+				startRoundBoxScript.setToDragon ();
+				startRoundBoxScript.setText ("RAAAAAAAAAAAAAAAAAAAAAWWWWWWWWWWWWWWWWWWWWRRRRRRRRRRRRRRRRRR");
+			} else if (nextWave > 3) {
 				/*
 				farmerChance = .3;
 				knightChance = .2;
@@ -133,7 +145,9 @@ public class WaveSpawner : MonoBehaviour {
 				} else {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
 				}
-			} else if (nextWave > 4) {
+				startRoundBoxScript.setToOrc ();
+				startRoundBoxScript.setText ("Look at us. We are orcs with horns sticking out of our heads. We look evil... Prepare to die.");
+			} else if (nextWave > 2) {
 				/*
 				farmerChance = .5;
 				knightChance = .3;
@@ -149,7 +163,9 @@ public class WaveSpawner : MonoBehaviour {
 				} else {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
 				}
-			} else if (nextWave > 2) {
+				startRoundBoxScript.setToElf ();
+				startRoundBoxScript.setText ("We are magical ELVES. We do magical things like magically killing people!");
+			} else if (nextWave > 1) {
 				/*
 				farmerChance = .7;
 				knightChance = .3;
@@ -162,6 +178,8 @@ public class WaveSpawner : MonoBehaviour {
 				} else {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
 				}
+				startRoundBoxScript.setToKnight ();
+				startRoundBoxScript.setText ("You are under arrest. There is no need for surrender. We'll be taking you dead.");
 			} else {
 				/*
 				farmerChance = 1;
@@ -171,6 +189,8 @@ public class WaveSpawner : MonoBehaviour {
 				dragonChance = 0;
 				*/
 				SpawnEnemy (farmers[Random.Range(0,3)]);
+				startRoundBoxScript.setToFarmer ();
+				startRoundBoxScript.setText ("Us farmers are angry! aAaAAaaAAAngry! We don't know why, but we're going to take it out on YOU!");
 			}
 
 			yield return new WaitForSeconds ( 1f/rate );
@@ -179,7 +199,7 @@ public class WaveSpawner : MonoBehaviour {
 		//Every 2 rounds, we spawn 3 more.
 		if(nextWave%2 == 0 && nextWave != 0){
 			Debug.Log ("Spawning 3 more units");
-			spawnCount += 3;
+			spawnCount += 2;
 		}
 		state = SpawnState.WAITING;
 
