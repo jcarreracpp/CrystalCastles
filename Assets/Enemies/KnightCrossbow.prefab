@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 195093303564079962}
   - component: {fileID: 114655068104076356}
   - component: {fileID: 114396161315575028}
+  - component: {fileID: 114482851093358906}
   m_Layer: 0
   m_Name: KnightCrossbow
   m_TagString: Enemy
@@ -1098,6 +1099,21 @@ MonoBehaviour:
   frequency: 1
   projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
   speed: 500
+--- !u!114 &114482851093358906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288359123035770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 35
+  myFaction: 1
+  weakness: 2
+  advantage: 0
 --- !u!114 &114655068104076356
 MonoBehaviour:
   m_ObjectHideFlags: 1

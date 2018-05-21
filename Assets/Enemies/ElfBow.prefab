@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 95138902827462174}
   - component: {fileID: 195196621921535356}
   - component: {fileID: 114752197237217784}
+  - component: {fileID: 114617921376115590}
   m_Layer: 0
   m_Name: ElfBow
   m_TagString: Enemy
@@ -2177,6 +2178,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114617921376115590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609639679861844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 30
+  myFaction: 2
+  weakness: 0
+  advantage: 1
 --- !u!114 &114752197237217784
 MonoBehaviour:
   m_ObjectHideFlags: 1

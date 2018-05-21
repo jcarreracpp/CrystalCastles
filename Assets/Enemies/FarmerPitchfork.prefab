@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 95323569373184484}
   - component: {fileID: 195499631094655618}
   - component: {fileID: 114800632856603900}
+  - component: {fileID: 114167851835127034}
   m_Layer: 0
   m_Name: FarmerPitchfork
   m_TagString: Enemy
@@ -498,6 +499,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114167851835127034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514709615045124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
+  myFaction: 0
+  weakness: 4
+  advantage: 4
 --- !u!114 &114800632856603900
 MonoBehaviour:
   m_ObjectHideFlags: 1

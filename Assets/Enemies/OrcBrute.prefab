@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 95355903177244180}
   - component: {fileID: 195193831102498124}
   - component: {fileID: 114394306784355722}
+  - component: {fileID: 114260404748662172}
   m_Layer: 0
   m_Name: OrcBrute
   m_TagString: Enemy
@@ -790,6 +791,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114260404748662172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1954979532453866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 60
+  myFaction: 3
+  weakness: 4
+  advantage: 0
 --- !u!114 &114394306784355722
 MonoBehaviour:
   m_ObjectHideFlags: 1

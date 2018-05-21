@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 95676793904702388}
   - component: {fileID: 195249680011756150}
   - component: {fileID: 114936424658156782}
+  - component: {fileID: 114799405432663292}
   m_Layer: 0
   m_Name: KnightSheildSword
   m_TagString: Enemy
@@ -644,6 +645,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114799405432663292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1956544174588666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 35
+  myFaction: 1
+  weakness: 2
+  advantage: 0
 --- !u!114 &114936424658156782
 MonoBehaviour:
   m_ObjectHideFlags: 1

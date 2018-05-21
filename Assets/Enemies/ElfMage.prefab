@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 95819865689109488}
   - component: {fileID: 195903751941052800}
   - component: {fileID: 114182696918118304}
+  - component: {fileID: 114450071807497644}
   m_Layer: 0
   m_Name: ElfMage
   m_TagString: Enemy
@@ -729,6 +730,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 0
+--- !u!114 &114450071807497644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090771446874468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 25
+  myFaction: 2
+  weakness: 0
+  advantage: 1
 --- !u!195 &195903751941052800
 NavMeshAgent:
   m_ObjectHideFlags: 1

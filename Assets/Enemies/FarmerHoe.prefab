@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 95591018024720984}
   - component: {fileID: 195621844066949580}
   - component: {fileID: 114641542150437162}
+  - component: {fileID: 114127350804519600}
   m_Layer: 0
   m_Name: FarmerHoe
   m_TagString: Enemy
@@ -571,6 +572,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114127350804519600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1604885736335114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
+  myFaction: 0
+  weakness: 4
+  advantage: 4
 --- !u!114 &114641542150437162
 MonoBehaviour:
   m_ObjectHideFlags: 1
