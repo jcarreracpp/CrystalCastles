@@ -2192,17 +2192,17 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1023857132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00003902407}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1864151456}
-  m_Father: {fileID: 1861224665}
-  m_RootOrder: 2
+  m_Father: {fileID: 1543307774}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: 68}
+  m_AnchoredPosition: {x: 118, y: 58.000042}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023857134
@@ -2243,7 +2243,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023857135}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1148615353}
+        m_MethodName: closeDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1023857135
@@ -2647,6 +2658,8 @@ MonoBehaviour:
   state: 2
   waveText: {fileID: 826320697}
   startRoundBox: {fileID: 1861224664}
+  startRoundBoxOutline: {fileID: 567412295}
+  startRoundBoxCloseButton: {fileID: 1023857132}
   gameManager: {fileID: 1148615350}
 --- !u!1 &1160728684
 GameObject:
@@ -3727,6 +3740,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1346709254}
+  - {fileID: 1023857133}
   m_Father: {fileID: 1404238710}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4379,7 +4393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: '...'
 --- !u!222 &1684725126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5195,7 +5209,6 @@ RectTransform:
   m_Children:
   - {fileID: 1325514729}
   - {fileID: 1199295604}
-  - {fileID: 1023857133}
   m_Father: {fileID: 567412296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5248,6 +5261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5799714022a881c409c970c4abbed333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialPortrait: {fileID: 21300000, guid: 75816409a58765948b904b1a35c3c933, type: 3}
   farmerPortrait: {fileID: 21300000, guid: 33d86343b37f273449088417f6cb1f5c, type: 3}
   knightPortrait: {fileID: 21300000, guid: ab1e4f01b239ee24a9bd6be25524f317, type: 3}
   elfPortrait: {fileID: 21300000, guid: a74402688efa8eb45abf49f2c29ed83a, type: 3}

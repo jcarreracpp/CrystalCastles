@@ -40,12 +40,18 @@ public class WaveSpawner : MonoBehaviour {
 	public GameObject startRoundBox;
 	private StartRoundBox startRoundBoxScript;
 
+	public GameObject startRoundBoxOutline;
+	public GameObject startRoundBoxCloseButton;
+
 	//responsible for connecting with GameManager and calling a method
 	public GameObject gameManager;
 	private GameManager gameManagerScript;
 
 	void Start ()
 	{
+		startRoundBoxOutline.gameObject.SetActive (true);
+		startRoundBoxCloseButton.gameObject.SetActive (true);
+		pause = true;
 		gameManagerScript = gameManager.GetComponent<GameManager> ();
 		startRoundBoxScript = startRoundBox.GetComponent<StartRoundBox> ();
 		setEnemiesRemainingTextMax ();
@@ -80,6 +86,12 @@ public class WaveSpawner : MonoBehaviour {
 			
 	}
 
+	public void closeDialogue()	{
+		startRoundBoxOutline.gameObject.SetActive (false);
+		startRoundBoxCloseButton.gameObject.SetActive (false);
+		pause = false;
+	}
+
 	void WaveCompleted ()
 	{
 		Debug.Log ("Wave Copmleted!");
@@ -89,6 +101,9 @@ public class WaveSpawner : MonoBehaviour {
 		//...
 		nextWave++;
 		waveText.GetComponent<Text>().text = "Wave: " + (nextWave+1);
+		startRoundBoxOutline.gameObject.SetActive (true);
+		startRoundBoxCloseButton.gameObject.SetActive (true);
+		pause = true;
 	}
 
 	//Checks every searchCountdown (set to 1, so every 1 second)
@@ -118,7 +133,7 @@ public class WaveSpawner : MonoBehaviour {
 			float temp = Random.Range (0.0f, 1.0f);
 
 			//Changing the percent chance of spawning type of enemy.
-			if (nextWave > 4) {
+			if (nextWave >= 4) {
 				/*
 				farmerChance = .1;
 				knightChance = .2;
@@ -128,7 +143,7 @@ public class WaveSpawner : MonoBehaviour {
 				*/
 				startRoundBoxScript.setToDragon ();
 				startRoundBoxScript.setText ("RAAAAAAAAAAAAAAAAAAAAAWWWWWWWWWWWWWWWWWWWWRRRRRRRRRRRRRRRRRR");
-			} else if (nextWave > 3) {
+			} else if (nextWave >= 3) {
 				/*
 				farmerChance = .3;
 				knightChance = .2;
@@ -147,7 +162,7 @@ public class WaveSpawner : MonoBehaviour {
 				}
 				startRoundBoxScript.setToOrc ();
 				startRoundBoxScript.setText ("Look at us. We are orcs with horns sticking out of our heads. We look evil... Prepare to die.");
-			} else if (nextWave > 2) {
+			} else if (nextWave >= 2) {
 				/*
 				farmerChance = .5;
 				knightChance = .3;
@@ -165,7 +180,7 @@ public class WaveSpawner : MonoBehaviour {
 				}
 				startRoundBoxScript.setToElf ();
 				startRoundBoxScript.setText ("We are magical ELVES. We do magical things like magically killing people!");
-			} else if (nextWave > 1) {
+			} else if (nextWave >= 1) {
 				/*
 				farmerChance = .7;
 				knightChance = .3;

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StartRoundBox : MonoBehaviour {
 
 
+	public Sprite tutorialPortrait;
 	public Sprite farmerPortrait;
 	public Sprite knightPortrait;
 	public Sprite elfPortrait;
@@ -17,8 +18,8 @@ public class StartRoundBox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		portraitWindow.GetComponent<Image> ().sprite = farmerPortrait;
-		setText ("...");
+		portraitWindow.GetComponent<Image> ().sprite = tutorialPortrait;
+		setText ("Controls:\n1. Numpad for spell combinations\n2. Left click to cast spell\n3. Right click to cancel spell");
 	}
 
 	public void setToFarmer(){
