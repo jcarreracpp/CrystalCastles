@@ -22,6 +22,8 @@ public class WaveSpawner : MonoBehaviour {
 	private float searchCountdown = 1f;
 	//Shop needs to change this back to false to resume wave
 	public bool pause = false;
+    //bryce
+    private bool waveStarted = false;
 
 	//Enemies by factions
 	public Transform[] farmers;
@@ -64,8 +66,8 @@ public class WaveSpawner : MonoBehaviour {
 		
 	void Update()
 	{
-
-		if (state == SpawnState.WAITING) {
+        //bryce
+		if (state == SpawnState.WAITING && pause == false && waveStarted == true) {
 			//Check if enemies are still alive
 			if (!EnemyIsAlive ()) {
 				WaveCompleted ();
@@ -81,6 +83,8 @@ public class WaveSpawner : MonoBehaviour {
 				// Start spawning wave
 				setEnemiesRemainingTextMax ();
 				StartCoroutine(SpawnWave(nextWave));
+                //bryce
+                waveStarted = true;
 			} 
 		} 
 			
@@ -104,6 +108,8 @@ public class WaveSpawner : MonoBehaviour {
 		startRoundBoxOutline.gameObject.SetActive (true);
 		startRoundBoxCloseButton.gameObject.SetActive (true);
 		pause = true;
+        //bryce
+        waveStarted = false;
 	}
 
 	//Checks every searchCountdown (set to 1, so every 1 second)
@@ -188,7 +194,7 @@ public class WaveSpawner : MonoBehaviour {
 				orcChance = 0;
 				dragonChance = 0;
 				*/
-				if (temp > .7) {
+				if (temp >=1) {
 					SpawnEnemy (knights[Random.Range(0,3)]);
 				} else {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
