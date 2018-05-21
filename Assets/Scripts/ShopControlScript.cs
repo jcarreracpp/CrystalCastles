@@ -49,12 +49,13 @@ public class ShopControlScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        money_Text.text = "Money: " + moneyAmount.ToString() + "$";
         isFireballSold = 0; // current fireball status;
         isFirewallSold = 0; // current firewall status;
 
         // check fireball is purchaseable
-        if (moneyAmount >= 75 && isFireballSold == 0)
+        /*
+         * 
+         * if (moneyAmount >= 75 && isFireballSold == 0)
             fireballBuyBtn.interactable = true;
         else
             fireballBuyBtn.interactable = false;
@@ -64,6 +65,8 @@ public class ShopControlScript : MonoBehaviour {
             firewallBuyBtn.interactable = true;
         else
             firewallBuyBtn.interactable = false;
+         */
+
     }
 
     public void exitShop()
