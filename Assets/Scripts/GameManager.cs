@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour {
 	private int wave;
 	private int enemyCount;
 
+    private int[] availableMagics;
+    // indicator of bought magics
+
 
 	[SerializeField]
 	private Text moneyText;
@@ -32,6 +35,10 @@ public class GameManager : MonoBehaviour {
 		Money = 0;
 		Wave = 1;
 		EnemyCount = 5;
+
+        availableMagics = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        // 0 = not available, 1 = usable
+        //[0] = fireball, [1] = firewall, [2] = knockbackwave, [3] = icelance, [4] = mudWall, [5] = geoslow, [6] = airbomb, [7] = chainLightning
 	}
 
 	// Update is called once per frame
@@ -86,4 +93,16 @@ public class GameManager : MonoBehaviour {
 	public void decrementEnemiesRemaining(){
 		EnemyCount--;
 	}
+
+    public void updateMagic(int index)
+    {
+        availableMagics[index] = 1;
+    }
+
+    public int returnMagic(int index)
+    {
+        return availableMagics[index];
+    }
+
+    
 }
