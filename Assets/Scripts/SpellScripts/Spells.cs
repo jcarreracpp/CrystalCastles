@@ -50,12 +50,12 @@ public class Spells : MonoBehaviour
         set { this.upgradeCost = value; }
     }
 
-	public int damage {
+	public int Damage {
 		get { return damage; }
 		set { this.damage = value; }
 	}
 
-	public string combination {
+	public string Combination {
 		get { return combination; }
 		set { this.combination = value; }
 	}
