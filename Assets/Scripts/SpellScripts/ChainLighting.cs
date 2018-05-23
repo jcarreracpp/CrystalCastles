@@ -9,6 +9,7 @@ public class ChainLighting : Spells {
         mana = 30;
         rank = 4;
         upgradeCost = 200;
+		combination = "1458936587159";
 	}
 
 	// Use this for initialization

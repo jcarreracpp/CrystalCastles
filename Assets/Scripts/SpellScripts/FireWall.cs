@@ -9,6 +9,7 @@ public class FireWall : Spells {
         mana = 50;
         rank = 2;
         upgradeCost = 250;
+		combination = "1258723698";
 	}
 
 	// Use this for initialization

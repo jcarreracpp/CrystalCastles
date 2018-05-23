@@ -11,6 +11,7 @@ public class Fireball : Spells
         mana = 10;
         rank = 1;
         upgradeCost = 75;
+		combination = "78965";
     }
 
     // Use this for initialization

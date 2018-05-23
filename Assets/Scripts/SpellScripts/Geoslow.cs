@@ -9,6 +9,7 @@ public class Geoslow : Spells {
         mana = 80;
         rank = 5;
         upgradeCost = 300;
+		combination = "7894561238741289632";
 	}
 
 	// Use this for initialization

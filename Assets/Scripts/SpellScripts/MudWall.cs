@@ -9,6 +9,7 @@ public class MudWall : Spells {
         mana = 20;
         rank = 3;
         upgradeCost = 200;
+		combination = "4789614563";
 	}
 
 	// Use this for initialization

@@ -9,6 +9,7 @@ public class IceLance : Spells {
         mana = 60;
         rank = 4;
         upgradeCost = 275;
+		combination = "15986159863578435784";
 	}
 
 	// Use this for initialization

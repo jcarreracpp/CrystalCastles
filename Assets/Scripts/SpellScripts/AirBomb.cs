@@ -9,6 +9,7 @@ public class AirBomb : Spells {
         mana = 25;
         rank = 2;
         upgradeCost = 125;
+		combination = "759153751953";
 	}
 
 	// Use this for initialization

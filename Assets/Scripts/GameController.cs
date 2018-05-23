@@ -55,12 +55,5 @@ public class GameController : MonoBehaviour {
             user = "";
         }
 
-		//if (Input.GetKeyDown(KeyCode.Keypad7))
-		//{
-		//	Debug.Log("ok");
-		//}
-		//if(Input.inputString == "89") {
-		//	Debug.Log("oh yeah");
-		//}
 	}
 }

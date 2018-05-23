@@ -11,6 +11,8 @@ public class Spells : MonoBehaviour
     public int mana;
     public int rank;
     public int upgradeCost;
+	public int damage;
+	public string combination;
 
     public Spells()
     {
@@ -47,6 +49,16 @@ public class Spells : MonoBehaviour
         get { return upgradeCost; }
         set { this.upgradeCost = value; }
     }
+
+	public int damage {
+		get { return damage; }
+		set { this.damage = value; }
+	}
+
+	public string combination {
+		get { return combination; }
+		set { this.combination = value; }
+	}
 
     // Use this for initialization
     void Start()

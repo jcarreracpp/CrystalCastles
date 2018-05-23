@@ -9,6 +9,7 @@ public class KnockbackWave : Spells {
 		mana = 15;
 		rank = 1;
 		upgradeCost = 100;
+		combination = "236589";
 	}
 
 	// Use this for initialization
