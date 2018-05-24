@@ -50,34 +50,70 @@ public class ShopControlScript : MonoBehaviour {
         this.money_Text.text = "Money: " + moneyAmount.ToString() + " G";
         soldMagics = new int[8];
         
-	}
+        //Receive current magic sales status
+        for (int i = 0; i < 8; i++)
+        {
+            soldMagics[i] = gManager.returnMagic(i);
+        }
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        isFireballSold = 0; // current fireball status;
-        isFirewallSold = 0; // current firewall status;
-
-        // check fireball is purchaseable
-        
-         * 
-         * if (moneyAmount >= 75 && isFireballSold == 0)
-            fireballBuyBtn.interactable = true;
-        else
-            fireballBuyBtn.interactable = false;
-
-        //check firewall is purchaseable
-        if (moneyAmount >= 250 && isFirewallSold == 0)
-            firewallBuyBtn.interactable = true;
-        else
-            firewallBuyBtn.interactable = false;
-         */
-
-
-         //Receive current magic sales status.
-         for(int i = 0; i < 8; i++)
+        // Check money && inventory for fireball
+        if(moneyAmount < 75 || soldMagics[0] == 1)
         {
-            soldMagics[i] = gManager.returnMagic(i);
+            fireballPriceTxt.text = "NOT AVAILABLE";
+            fireballBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for firewall
+        if (moneyAmount < 250 || soldMagics[1] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for knockback wave
+        if (moneyAmount < 100 || soldMagics[2] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for lance
+        if (moneyAmount < 275 || soldMagics[3] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for mudWall
+        if (moneyAmount < 200 || soldMagics[4] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for geo
+        if (moneyAmount < 300 || soldMagics[5] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for air bomb
+        if (moneyAmount < 125 || soldMagics[6] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
+        }
+
+        // Check money && inventory for chain lightning
+        if (moneyAmount < 275 || soldMagics[7] == 1)
+        {
+            firewallPriceTxt.text = "NOT AVAILABLE";
+            firewallBuyBtn.gameObject.SetActive(false);
         }
 
     }
@@ -86,7 +122,7 @@ public class ShopControlScript : MonoBehaviour {
     {
         // set changed money value.
         gManager.Money = moneyAmount;
-        SceneManager.LoadScene("default");
+        
     }
 
     public void buyFireball()
