@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyLance
         m_Mode: 1
         m_Arguments:
@@ -924,6 +924,7 @@ GameObject:
   - component: {fileID: 161887801}
   - component: {fileID: 161887800}
   - component: {fileID: 161887799}
+  - component: {fileID: 161887802}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1004,15 +1005,45 @@ RectTransform:
   - {fileID: 374345835}
   - {fileID: 1028881528}
   - {fileID: 100461945}
-  - {fileID: 1862225366}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 0
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &161887802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 161887798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec6efa03a3756b4dbe353bd4aeda1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gManager: {fileID: 0}
+  money_Text: {fileID: 1028881531}
+  fireballPriceTxt: {fileID: 928635288}
+  firewallPriceTxt: {fileID: 6483374}
+  wavePriceTxt: {fileID: 1352856572}
+  lancePriceTxt: {fileID: 1790373897}
+  mudWallPriceTxt: {fileID: 505328350}
+  geoPriceTxt: {fileID: 318620192}
+  airPriceTxt: {fileID: 881961723}
+  chainPriceTxt: {fileID: 2073695247}
+  healthPriceTxt: {fileID: 1948629241}
+  fireballBuyBtn: {fileID: 541163407}
+  firewallBuyBtn: {fileID: 1192815494}
+  waveBuyBtn: {fileID: 231283872}
+  lanceBuyBtn: {fileID: 30743179}
+  wallBuyBtn: {fileID: 1645175209}
+  geoBuyBtn: {fileID: 963421050}
+  airBuyBtn: {fileID: 1831491003}
+  chainBuyBtn: {fileID: 1122359478}
+  healthBuyBtn: {fileID: 374345838}
 --- !u!1 &192877342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,12 +1165,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198630528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02341783, y: 9.254419, z: -12.25441}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.023417832, y: 9.25441, z: -12.254406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &221984816
 GameObject:
@@ -1366,7 +1397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyWave
         m_Mode: 1
         m_Arguments:
@@ -1442,7 +1473,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1904,7 +1935,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyHealth
         m_Mode: 1
         m_Arguments:
@@ -2512,7 +2543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyFireball
         m_Mode: 1
         m_Arguments:
@@ -2748,7 +2779,7 @@ RectTransform:
   m_Children:
   - {fileID: 1861224665}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3083,7 +3114,7 @@ RectTransform:
   m_Children:
   - {fileID: 1814083379}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3347,7 +3378,7 @@ Transform:
   - {fileID: 2045444555}
   - {fileID: 890748051}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &744830273
 GameObject:
@@ -3663,7 +3694,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -4280,7 +4311,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyGeo
         m_Mode: 1
         m_Arguments:
@@ -4745,7 +4776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -43.23999, y: 328.3}
+  m_AnchoredPosition: {x: 35.19, y: -103.6}
   m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028881529
@@ -5169,7 +5200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyChain
         m_Mode: 1
         m_Arguments:
@@ -5899,7 +5930,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyFirewall
         m_Mode: 1
         m_Arguments:
@@ -6436,6 +6467,7 @@ GameObject:
   - component: {fileID: 1323999458}
   - component: {fileID: 1323999457}
   - component: {fileID: 1323999456}
+  - component: {fileID: 1323999460}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6506,6 +6538,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 73.135, y: 0, z: 0}
+--- !u!114 &1323999460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323999455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dfdb44b4375fb4986334fef1f3ca51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 161887798}
+  exitText: {fileID: 1816821373}
 --- !u!1 &1325514728
 GameObject:
   m_ObjectHideFlags: 0
@@ -7053,7 +7098,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -19.298878}
   m_LocalScale: {x: 0.027492868, y: 0.027492868, z: 0.027492868}
   m_Children:
-  - {fileID: 161887801}
   - {fileID: 567412296}
   - {fileID: 826320698}
   - {fileID: 251180490}
@@ -7062,6 +7106,8 @@ RectTransform:
   - {fileID: 1889584904}
   - {fileID: 1768744391}
   - {fileID: 1543307774}
+  - {fileID: 1862225366}
+  - {fileID: 161887801}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7235,7 +7281,7 @@ RectTransform:
   - {fileID: 1346709254}
   - {fileID: 1023857133}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7306,7 +7352,7 @@ RectTransform:
   m_Children:
   - {fileID: 192877343}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7840,7 +7886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyWall
         m_Mode: 1
         m_Arguments:
@@ -8460,7 +8506,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8748,7 +8794,7 @@ GameObject:
   - component: {fileID: 1816821374}
   - component: {fileID: 1816821373}
   m_Layer: 5
-  m_Name: Text
+  m_Name: shopExitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8804,7 +8850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: SHOP
 --- !u!222 &1816821374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9110,7 +9156,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 198630529}
         m_MethodName: buyAir
         m_Mode: 1
         m_Arguments:
@@ -9421,7 +9467,7 @@ GameObject:
   - component: {fileID: 1862225368}
   - component: {fileID: 1862225367}
   m_Layer: 5
-  m_Name: Exit_btn
+  m_Name: Shop_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9434,17 +9480,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862225365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000052032094}
+  m_LocalScale: {x: 0.630709, y: 0.6307095, z: 0.6307095}
   m_Children:
   - {fileID: 1816821372}
-  m_Father: {fileID: 161887801}
-  m_RootOrder: 30
+  m_Father: {fileID: 1404238710}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273.8, y: -165.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 240.5, y: -196.3}
+  m_SizeDelta: {x: 76.2, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862225367
 MonoBehaviour:
@@ -9485,8 +9531,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: exitShop
+      - m_Target: {fileID: 1323999460}
+        m_MethodName: showhidPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9635,7 +9681,7 @@ RectTransform:
   m_Children:
   - {fileID: 1813382657}
   m_Father: {fileID: 1404238710}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
