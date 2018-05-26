@@ -8,7 +8,9 @@ public class shopButtonScript : MonoBehaviour {
     public GameObject Panel;
     int counter = 1;
     public Text exitText;
-	// Use this for initialization
+    public GameManager gManager;
+	
+    // Use this for initialization
 	void Start () {
 		
 	}

@@ -60,7 +60,7 @@ public class ShopControlScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
+        
         // Check money && inventory for fireball
         if(moneyAmount < 75 || soldMagics[0] == 1)
         {
@@ -116,7 +116,6 @@ public class ShopControlScript : MonoBehaviour {
             firewallPriceTxt.text = "NOT AVAILABLE";
             firewallBuyBtn.gameObject.SetActive(false);
         }
-        */
 
         gManager.Money = moneyAmount;
     }

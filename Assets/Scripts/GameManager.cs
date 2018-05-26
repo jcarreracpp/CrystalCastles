@@ -36,7 +36,11 @@ public class GameManager : MonoBehaviour {
 		Wave = 1;
 		EnemyCount = 5;
 
-        availableMagics = new int[8] { 0, 0, 0, 0, 0, 0, 0, 0 };
+        availableMagics = new int[8];
+        for(int i = 0; i < 8; i++)
+        {
+            availableMagics[i] = 0;
+        }
         // 0 = not available, 1 = usable
         //[0] = fireball, [1] = firewall, [2] = knockbackwave, [3] = icelance, [4] = mudWall, [5] = geoslow, [6] = airbomb, [7] = chainLightning
 	}
