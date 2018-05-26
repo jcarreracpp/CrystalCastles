@@ -7,20 +7,10 @@ using UnityEngine.SceneManagement;
 public class ShopControlScript : MonoBehaviour {
 
     public GameManager gManager;
-
+    
     int moneyAmount;
     int [] soldMagics;
-    /*
-    int isFireballSold;
-    int isFirewallSold;
-    int isWaveSold;
-    int isLanceSold;
-    int isMudwallSold;
-    int isGeoSold;
-    int isAirSold;
-    int isChainSold;
-    int isHealthFull;
-    */
+    
 
     public Text money_Text;
     public Text fireballPriceTxt;
@@ -60,9 +50,14 @@ public class ShopControlScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        gManager.Money = moneyAmount;
+       
+    }
+
+    public void chekcMagicStatus()
+    {
         // Check money && inventory for fireball
-        if(moneyAmount < 75 || soldMagics[0] == 1)
+        if (moneyAmount < 75 || soldMagics[0] == 1)
         {
             fireballPriceTxt.text = "NOT AVAILABLE";
             fireballBuyBtn.gameObject.SetActive(false);
@@ -116,10 +111,7 @@ public class ShopControlScript : MonoBehaviour {
             firewallPriceTxt.text = "NOT AVAILABLE";
             firewallBuyBtn.gameObject.SetActive(false);
         }
-
-        gManager.Money = moneyAmount;
     }
-
     
 
     public void buyFireball()
