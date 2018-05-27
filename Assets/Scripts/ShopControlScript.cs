@@ -193,5 +193,9 @@ public class ShopControlScript : MonoBehaviour {
         healthPriceTxt.text = "SOLD";
         healthBuyBtn.gameObject.SetActive(false);
     }
+    public void addMoney(int money)
+    {
+        moneyAmount += money;
+    }
 
 }
