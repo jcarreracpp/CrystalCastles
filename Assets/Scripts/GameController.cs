@@ -6,6 +6,13 @@ public class GameController : MonoBehaviour {
 
 	public string user = "";
     int empty;
+	public Vector3 mousePosition;
+    public Transform target;
+    public Vector3 objectPosition;
+    public float angle;
+	public GameObject fireballPrefab;
+	GameObject fireball;
+	public Vector3 wizardPos;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +22,17 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		mousePosition = Input.mousePosition;
+        objectPosition = Camera.main.WorldToScreenPoint(target.position);
+        mousePosition.x = mousePosition.x - objectPosition.x;
+        mousePosition.y = mousePosition.y - objectPosition.y;
+        angle = -(Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg) + 90;
+        target.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 		user += Input.inputString;
 
 		if(user.Contains("78965")) {
 			Debug.Log("Fireball");
+			fireball = Instantiate(fireballPrefab, wizardPos, Quaternion.identity) as GameObject;
 			user = "";
 		}
 		if (user.Contains("236589")) {
