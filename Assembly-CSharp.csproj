@@ -59,6 +59,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+    <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
     <Compile Include="Assets\Scripts\BarScript.cs" />
     <Compile Include="Assets\Scripts\BookHandler.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
@@ -84,6 +91,7 @@
     <Compile Include="Assets\Scripts\TestProjectile.cs" />
     <Compile Include="Assets\Scripts\WaveSpawn.cs" />
     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
+    <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/davidescobedo/Documents/GitHub/CrystalCastles/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
