@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour {
 			fireball = Instantiate(fireballPrefab, wizardPos, Quaternion.identity) as GameObject;
 			rb = fireball.GetComponent<Rigidbody>();
             //VelocityChange or Impulse???
-			rb.AddForceAtPosition(objectPosition, mousePosition, ForceMode.VelocityChange);
+			rb.AddForceAtPosition(mousePosition, mousePosition, ForceMode.VelocityChange);
 			user = "";
 		}
 		if (user.Contains("236589")) {
