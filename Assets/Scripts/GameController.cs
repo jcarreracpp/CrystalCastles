@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour {
 	public GameObject fireballPrefab;
 	GameObject fireball;
 	public Vector3 wizardPos;
-
+	public Rigidbody rb;
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -30,9 +31,13 @@ public class GameController : MonoBehaviour {
         target.transform.rotation = Quaternion.Euler(new Vector3(0, angle, 0));
 		user += Input.inputString;
 
-		if(user.Contains("78965")) {
+		if (user.Contains("78965"))
+		{
 			Debug.Log("Fireball");
 			fireball = Instantiate(fireballPrefab, wizardPos, Quaternion.identity) as GameObject;
+			rb = fireball.GetComponent<Rigidbody>();
+            //VelocityChange or Impulse???
+			rb.AddForceAtPosition(objectPosition, mousePosition, ForceMode.VelocityChange);
 			user = "";
 		}
 		if (user.Contains("236589")) {
