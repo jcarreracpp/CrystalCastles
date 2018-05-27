@@ -3574,6 +3574,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   user: 
+  mousePosition: {x: 0, y: 0, z: 0}
+  target: {fileID: 285463935}
+  objectPosition: {x: 0, y: 0, z: 0}
+  angle: 0
+  fireballPrefab: {fileID: 1698415960343266, guid: 64ecca703405d4567810e7451e3d6421,
+    type: 2}
+  wizardPos: {x: 0, y: 0, z: 0}
 --- !u!1 &803311718
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,6 +5480,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   user: 
+  mousePosition: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
+  objectPosition: {x: 0, y: 0, z: 0}
+  angle: 0
+  fireballPrefab: {fileID: 0}
+  wizardPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1148615355
 MonoBehaviour:
   m_ObjectHideFlags: 0
