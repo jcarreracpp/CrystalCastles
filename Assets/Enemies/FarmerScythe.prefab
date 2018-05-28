@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 195626451252682742}
   - component: {fileID: 114619573254536262}
   - component: {fileID: 114652574732448310}
+  - component: {fileID: 114164204822599644}
   m_Layer: 0
   m_Name: FarmerScythe
   m_TagString: Enemy
@@ -669,6 +670,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114164204822599644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867011271057752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7ea56def33a8d4e9e70d6d83875e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 3
+  frequency: 1
+  damage: 1
 --- !u!114 &114355588081311218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -750,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 0
+  stopDistance: 5
 --- !u!114 &114652574732448310
 MonoBehaviour:
   m_ObjectHideFlags: 1

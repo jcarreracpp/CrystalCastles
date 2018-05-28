@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 5
+  stopDistance: 25
 --- !u!114 &114448834876127566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1263,10 +1263,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce9021a18005af46963bf54cae614fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
-  frequency: 1
+  range: 40
+  frequency: 2
   projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
-  speed: 500
+  speed: 2000
 --- !u!114 &114535488887042960
 MonoBehaviour:
   m_ObjectHideFlags: 1

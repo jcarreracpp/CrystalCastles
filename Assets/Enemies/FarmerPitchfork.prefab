@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 195159405640419584}
   - component: {fileID: 114642123650417498}
   - component: {fileID: 114948993484901292}
+  - component: {fileID: 114899809906499310}
   m_Layer: 0
   m_Name: FarmerPitchfork
   m_TagString: Enemy
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 0
+  stopDistance: 8
 --- !u!114 &114672178119646502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -699,6 +700,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114899809906499310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757693965400684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7ea56def33a8d4e9e70d6d83875e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 6
+  frequency: 4
+  damage: 2
 --- !u!114 &114948993484901292
 MonoBehaviour:
   m_ObjectHideFlags: 1

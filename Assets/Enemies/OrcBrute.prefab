@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 195681711871270172}
   - component: {fileID: 114073782328521870}
   - component: {fileID: 114122010371919382}
+  - component: {fileID: 114458125662302142}
   m_Layer: 0
   m_Name: OrcBrute
   m_TagString: Enemy
@@ -899,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 0
+  stopDistance: 8
 --- !u!114 &114122010371919382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,6 +933,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114458125662302142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074001901432942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7ea56def33a8d4e9e70d6d83875e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 8
+  frequency: 10
+  damage: 8
 --- !u!114 &114459016138735070
 MonoBehaviour:
   m_ObjectHideFlags: 1

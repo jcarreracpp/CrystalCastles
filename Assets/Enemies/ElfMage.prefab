@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 195516225390087770}
   - component: {fileID: 114603394931643830}
   - component: {fileID: 114073812748492532}
+  - component: {fileID: 114310519665367992}
   m_Layer: 0
   m_Name: ElfMage
   m_TagString: Enemy
@@ -847,6 +848,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114310519665367992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197834117331962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce9021a18005af46963bf54cae614fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 30
+  frequency: 5
+  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
+  speed: 500
 --- !u!114 &114414222809631242
 MonoBehaviour:
   m_ObjectHideFlags: 1

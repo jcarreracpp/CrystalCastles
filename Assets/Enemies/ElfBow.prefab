@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 195658124541941746}
   - component: {fileID: 114425380129935714}
   - component: {fileID: 114777093754256968}
+  - component: {fileID: 114064176932549440}
   m_Layer: 0
   m_Name: ElfBow
   m_TagString: Enemy
@@ -2248,6 +2249,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114064176932549440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213068859972806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce9021a18005af46963bf54cae614fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 25
+  frequency: 2
+  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
+  speed: 1000
 --- !u!114 &114085798848599980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2280,7 +2296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 0
+  stopDistance: 25
 --- !u!114 &114733733924664548
 MonoBehaviour:
   m_ObjectHideFlags: 1

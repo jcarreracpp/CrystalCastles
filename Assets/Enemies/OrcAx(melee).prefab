@@ -261,8 +261,8 @@ GameObject:
   - component: {fileID: 95533449756228222}
   - component: {fileID: 195944643993641402}
   - component: {fileID: 114577915710166022}
-  - component: {fileID: 114801142815193938}
   - component: {fileID: 114159495082937398}
+  - component: {fileID: 114165189881206946}
   m_Layer: 0
   m_Name: OrcAx(melee)
   m_TagString: Enemy
@@ -1167,6 +1167,20 @@ MonoBehaviour:
   weakness: 4
   advantage: 0
   healthBar: {fileID: 1552037014232842}
+--- !u!114 &114165189881206946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1916580491952164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7ea56def33a8d4e9e70d6d83875e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  frequency: 3
+  damage: 3
 --- !u!114 &114290286383665690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1200,21 +1214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 5
---- !u!114 &114801142815193938
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1916580491952164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce9021a18005af46963bf54cae614fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 5
-  frequency: 3
-  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
-  speed: 300
 --- !u!114 &114840070149696300
 MonoBehaviour:
   m_ObjectHideFlags: 1
