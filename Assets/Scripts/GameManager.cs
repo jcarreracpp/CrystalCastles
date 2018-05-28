@@ -82,12 +82,6 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-    public void gotoShop()
-    {
-        SceneManager.LoadScene("ShopScene");
-    }
-
-
 	//This will be called by WaveSpawner at the start of rounds
 	public void setEnemiesRemainingMax(int newMax){
 		EnemyCount = newMax;
@@ -108,5 +102,4 @@ public class GameManager : MonoBehaviour {
         return availableMagics[index];
     }
 
-    
 }

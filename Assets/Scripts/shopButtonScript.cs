@@ -25,12 +25,12 @@ public class shopButtonScript : MonoBehaviour {
         counter++;
         if (counter % 2 == 1)
         {
-            exitText.text = "SOLD";
+            exitText.text = "SHOP";
             Panel.gameObject.SetActive(false);
         }
         else
         {
-            exitText.text = "SHOP";
+            exitText.text = "EXIT";
             Panel.gameObject.SetActive(true);
         }
     }
