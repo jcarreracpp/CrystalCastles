@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3581,6 +3581,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 1698415960343266, guid: 64ecca703405d4567810e7451e3d6421,
     type: 2}
   wizardPos: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
 --- !u!1 &803311718
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,7 +4800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 35.19, y: -103.6}
+  m_AnchoredPosition: {x: -141.76, y: 388.9}
   m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028881529
@@ -5487,6 +5488,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 1698415960343266, guid: 64ecca703405d4567810e7451e3d6421,
     type: 2}
   wizardPos: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
 --- !u!114 &1148615355
 MonoBehaviour:
   m_ObjectHideFlags: 0
