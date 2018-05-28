@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4418,7 +4418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4231955438562678, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
       propertyPath: m_IsActive
@@ -4487,7 +4487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978293100
 GameObject:
@@ -5369,6 +5369,7 @@ GameObject:
   - component: {fileID: 1148615353}
   - component: {fileID: 1148615354}
   - component: {fileID: 1148615355}
+  - component: {fileID: 1148615356}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5504,6 +5505,17 @@ MonoBehaviour:
   target: {fileID: 285463935}
   objectPosition: {x: 0, y: 0, z: 0}
   angle: 0
+--- !u!114 &1148615356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148615350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3af1afbf19ac7a4aab19d1a292f845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1160728684
 GameObject:
   m_ObjectHideFlags: 0
@@ -7142,7 +7154,7 @@ RectTransform:
   - {fileID: 1862225366}
   - {fileID: 161887801}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7545,7 +7557,7 @@ Transform:
   - {fileID: 285463935}
   - {fileID: 760019895}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1591670599
 MonoBehaviour:
@@ -7724,7 +7736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1626920747
 GameObject:

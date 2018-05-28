@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    
     private GameObject gameManager;
     private GameManager gm;
     private GameObject shopControl;
@@ -14,18 +15,21 @@ public class Enemy : MonoBehaviour {
     public faction myFaction;
     public element weakness;
     public element advantage;
+    
 
     public GameObject healthBar;
 
     private int gold;
     // Use this for initialization
     void Start () {
+        
         currentHP = MAXHP;
         gameManager = GameObject.Find("GameManager");
         gm = gameManager.GetComponent<GameManager>();
         shopControl = GameObject.Find("ShopControl");
         sc = shopControl.GetComponent<ShopControlScript>();
         gold = (int)MAXHP;
+        
     }
 	
 	// Update is called once per frame
@@ -59,6 +63,8 @@ public class Enemy : MonoBehaviour {
         {
             damage/=2;
         }
+       
+
         currentHP -= damage;
         if (currentHP < 0)
         {
@@ -67,14 +73,26 @@ public class Enemy : MonoBehaviour {
         healthBar.transform.localScale = new Vector3((float)currentHP/(float)MAXHP,1,1);
         
     }
+    public void heal(double helath)
+    {
+        currentHP += helath;
+        if (currentHP > MAXHP)
+        {
+            currentHP = MAXHP;
+        }
+        healthBar.transform.localScale = new Vector3((float)currentHP / (float)MAXHP, 1, 1);
+    }
     
    
     private void death()
     {
         gm.decrementEnemiesRemaining();
         sc.addMoney(gold);
+        
+        
         Destroy(this.gameObject);
         
 
     }
+    
 }

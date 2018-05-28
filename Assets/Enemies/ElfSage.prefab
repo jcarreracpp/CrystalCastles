@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 195595254399125148}
   - component: {fileID: 114532330176796572}
   - component: {fileID: 114934201460214876}
+  - component: {fileID: 114259540433337276}
   m_Layer: 0
   m_Name: ElfSage
   m_TagString: Enemy
@@ -1207,6 +1208,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114259540433337276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352074723795930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff2ee3e5c5912040be1937c38270c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regen: 5
+  frequency: 3
 --- !u!114 &114532330176796572
 MonoBehaviour:
   m_ObjectHideFlags: 1

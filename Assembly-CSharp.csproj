@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\LookAtMouse.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ProjectileAttackWithinRange.cs" />
+    <Compile Include="Assets\Scripts\SageScript.cs" />
     <Compile Include="Assets\Scripts\shopButtonScript.cs" />
     <Compile Include="Assets\Scripts\ShopControlScript.cs" />
     <Compile Include="Assets\Scripts\SpellScripts\AirBomb.cs" />
