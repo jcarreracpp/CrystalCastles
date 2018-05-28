@@ -102,4 +102,9 @@ public class GameManager : MonoBehaviour {
         return availableMagics[index];
     }
 
+    public float returnHealth()
+    {
+        return playerScript.Health.CurrentVal;
+    }
+
 }

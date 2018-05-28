@@ -9,6 +9,7 @@ public class ShopControlScript : MonoBehaviour {
     public GameManager gManager;
     
     int moneyAmount;
+    int currentHealth;
     int [] soldMagics;
     
 
@@ -38,6 +39,7 @@ public class ShopControlScript : MonoBehaviour {
 	void Start () {
         moneyAmount = gManager.Money; // current money amount
         money_Text.text = "Money: " + moneyAmount.ToString() + " G";
+        currentHealth = (int)gManager.returnHealth();
         soldMagics = new int[8];
         
         //Receive current magic sales status
@@ -52,10 +54,16 @@ public class ShopControlScript : MonoBehaviour {
 	void Update () {
         chekcMagicStatus();
         gManager.Money = moneyAmount;
+
+
+        
     }
 
     public void chekcMagicStatus()
     {
+        if((int)gManager.returnHealth() < 30)
+            healthBuyBtn.gameObject.SetActive(true);
+
         // Check money && inventory for fireball
         if (moneyAmount < 75)
         {
@@ -110,6 +118,20 @@ public class ShopControlScript : MonoBehaviour {
         {
             chainPriceTxt.text = "N/A";
             chainBuyBtn.gameObject.SetActive(false);
+        }
+
+        //check health
+        if((int)gManager.returnHealth() == 30)
+        {
+            healthPriceTxt.text = "FULL";
+            healthBuyBtn.gameObject.SetActive(false);
+        }
+
+        //check health money
+        if (moneyAmount < 100)
+        {
+            healthPriceTxt.text = "N/A";
+            healthBuyBtn.gameObject.SetActive(false);
         }
     }
     
