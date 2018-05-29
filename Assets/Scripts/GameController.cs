@@ -13,11 +13,13 @@ public class GameController : MonoBehaviour {
 	public GameObject fireballPrefab;
 	GameObject fireball;
 	public Transform wizardPos;
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public AudioSource audioOut;
+    AudioClip fireballSFX;
+
+    // Use this for initialization
+    void Start () {
+        fireballSFX = Resources.Load("AudioFiles/robinhood-fireball-woosh") as AudioClip;
+    }
 
 	// Update is called once per frame
 	void Update()
@@ -36,6 +38,7 @@ public class GameController : MonoBehaviour {
 			fireball = Instantiate(fireballPrefab, wizardPos.position, wizardPos.rotation) as GameObject;
 			fireball.GetComponent<Rigidbody>().velocity = fireball.transform.forward * 150f;
 			Destroy(fireball, 2.0f);
+            		playSound(fireballSFX);
             //VelocityChange or Impulse???
 			user = "";
 		}
@@ -75,4 +78,10 @@ public class GameController : MonoBehaviour {
         }
 
 	}
+
+    void playSound(AudioClip ac) {
+        audioOut.mute = false;
+        audioOut.Stop();
+        audioOut.PlayOneShot(ac);
+    }
 }
