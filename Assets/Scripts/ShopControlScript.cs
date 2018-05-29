@@ -211,7 +211,8 @@ public class ShopControlScript : MonoBehaviour {
     public void buyHealth()
     {
         moneyAmount -= 100; // not sure how much it will be
-        // set wave buy status to 1
+        // set health full
+        gManager.buyHealth();
         healthPriceTxt.text = "SOLD";
         healthBuyBtn.gameObject.SetActive(false);
     }

@@ -107,4 +107,9 @@ public class GameManager : MonoBehaviour {
         return playerScript.Health.CurrentVal;
     }
 
+    public void buyHealth()
+    {
+        playerScript.Health.Initialize();
+    }
+
 }

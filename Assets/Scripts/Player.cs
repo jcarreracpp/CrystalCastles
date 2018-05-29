@@ -48,4 +48,5 @@ public class Player : MonoBehaviour {
     {
         health.CurrentVal += i;
     }
+    
 }
