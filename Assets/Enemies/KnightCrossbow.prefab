@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 114323925644698368}
   - component: {fileID: 114532072505919354}
   - component: {fileID: 114109487785755114}
+  - component: {fileID: 65609150228550384}
   m_Layer: 0
   m_Name: KnightCrossbow
   m_TagString: Enemy
@@ -1136,6 +1137,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544308523036358}
   m_Mesh: {fileID: 4300006, guid: 5412286ac99aed44a80d112ac63f5d9b, type: 3}
+--- !u!65 &65609150228550384
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462687004746618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3425636, y: 15.585335, z: 2.4551716}
+  m_Center: {x: 0.07056999, y: 7.2926674, z: -0.23913288}
 --- !u!95 &95195944770459748
 Animator:
   serializedVersion: 3

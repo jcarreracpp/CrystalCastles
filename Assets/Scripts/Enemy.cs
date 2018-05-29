@@ -94,5 +94,10 @@ public class Enemy : MonoBehaviour {
         
 
     }
+
+	void OnTriggerEnter(Collider other){
+		Debug.Log ("hit");
+		takeDamage (5.0f,0);
+	}
     
 }

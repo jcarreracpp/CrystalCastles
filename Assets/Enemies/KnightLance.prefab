@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 114194627762537752}
   - component: {fileID: 114158333746211110}
   - component: {fileID: 114262823363599196}
+  - component: {fileID: 65134875055672030}
   m_Layer: 0
   m_Name: KnightLance
   m_TagString: Enemy
@@ -1428,6 +1429,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1656472761820750}
   m_Mesh: {fileID: 4300002, guid: d63427fc71608aa43941d0373a84a905, type: 3}
+--- !u!65 &65134875055672030
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145179820225392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3425636, y: 15.585335, z: 2.4551716}
+  m_Center: {x: 0.07056999, y: 7.2926674, z: -0.23913288}
 --- !u!95 &95573375853581738
 Animator:
   serializedVersion: 3

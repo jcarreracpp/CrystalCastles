@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 392}
-  m_MaxSize: {x: 22012, y: 14042}
+  m_MinSize: {x: 913, y: 371}
+  m_MaxSize: {x: 22008, y: 14021}
   vertical: 0
-  controlID: 2875
+  controlID: 2882
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 0
     width: 527
     height: 947
-  m_MinSize: {x: 436, y: 392}
-  m_MaxSize: {x: 14006, y: 14042}
+  m_MinSize: {x: 432, y: 371}
+  m_MaxSize: {x: 14002, y: 14021}
   vertical: 1
-  controlID: 3074
+  controlID: 2883
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 527
     height: 633
-  m_MinSize: {x: 436, y: 271}
-  m_MaxSize: {x: 14006, y: 10021}
+  m_MinSize: {x: 432, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 3075
+  controlID: 2884
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 274
     height: 633
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -210,20 +210,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Enemies
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\jsupr\Documents\Unity Projects\Crystal Castles Game
-    Dev
+  m_LastProjectPath: F:\Projects\Games\CS 470 - Final\CrystalCastles
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c0230000
     m_LastClickedID: 9152
-    m_ExpandedIDs: 000000004e2b0000642b0000442c00001a2d0000522d00005c2d0000cc2d0000262e00009a2f0000a22f000042300000b6310000ce31000052320000043300005e3e0000603e0000623e0000
+    m_ExpandedIDs: 00000000b42b0000ca2b0000a82c00007e2d0000b42d0000be2d00002e2e0000882e0000fa2f0000a230000016320000b032000062330000a43e0000a63e0000a83e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -248,10 +247,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 384.9299}
-    m_SelectedIDs: 08360000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e2b0000642b0000442c00001a2d0000522d00005c2d0000cc2d0000262e00009a2f0000a22f000042300000b6310000ce31000052320000043300005e3e0000603e0000623e0000
+    scrollPos: {x: 0, y: 98}
+    m_SelectedIDs: 1e2f0000
+    m_LastClickedID: 12062
+    m_ExpandedIDs: 00000000b42b0000ca2b0000a82c00007e2d0000b42d0000be2d00002e2e0000882e0000fa2f0000a230000016320000b032000062330000a43e0000a63e0000a83e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -276,8 +275,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 08360000
-    m_LastClickedInstanceID: 13832
+    m_SelectedInstanceIDs: 1e2f0000
+    m_LastClickedInstanceID: 12062
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -324,8 +323,8 @@ MonoBehaviour:
     y: 0
     width: 253
     height: 633
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -358,9 +357,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 08360000
-    m_LastClickedID: 13832
-    m_ExpandedIDs: 0cfbffff0000000046350000ec360000
+    m_SelectedIDs: 1e2f0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 62f9ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,9 +521,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.5661148, y: -0.0069264974, z: 0.0047571855, w: -0.82428366}
+    m_Target: {x: -0.5784311, y: 0.0029345476, z: -0.002080668, w: -0.8157222}
     speed: 2
-    m_Value: {x: -0.5661148, y: -0.0069264974, z: 0.0047571855, w: -0.82428366}
+    m_Value: {x: -0.5784312, y: 0.0029345478, z: -0.002080668, w: -0.8157222}
   m_Size:
     m_Target: 133.97368
     speed: 2

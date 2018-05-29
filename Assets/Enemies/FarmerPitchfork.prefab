@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 114642123650417498}
   - component: {fileID: 114948993484901292}
   - component: {fileID: 114899809906499310}
+  - component: {fileID: 65221284042996452}
   m_Layer: 0
   m_Name: FarmerPitchfork
   m_TagString: Enemy
@@ -552,6 +553,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627788278663702}
   m_Mesh: {fileID: 4300006, guid: 034621951a35c2847b4046d52e6c40bb, type: 3}
+--- !u!65 &65221284042996452
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757693965400684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3425636, y: 15.585335, z: 2.4551716}
+  m_Center: {x: 0.07056999, y: 7.2926674, z: -0.23913288}
 --- !u!95 &95458833293423652
 Animator:
   serializedVersion: 3
@@ -656,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 8
+  stopDistance: 6
 --- !u!114 &114672178119646502
 MonoBehaviour:
   m_ObjectHideFlags: 1

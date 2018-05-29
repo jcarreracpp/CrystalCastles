@@ -19,7 +19,7 @@ public class StartRoundBox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		portraitWindow.GetComponent<Image> ().sprite = tutorialPortrait;
-		setText ("Controls:\n1. Numpad for spell combinations\n2. Left click to cast spell\n3. Right click to cancel spell");
+		setText ("Controls:\n1. Aim with mouse\n2. Enter number combo for spells");
 	}
 
 	public void setToFarmer(){

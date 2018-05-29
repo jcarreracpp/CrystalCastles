@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114860204366974698}
   - component: {fileID: 114659964870952990}
   - component: {fileID: 114798654100634030}
+  - component: {fileID: 65685791969012180}
   m_Layer: 0
   m_Name: OrcAx(trowing)
   m_TagString: Enemy
@@ -1063,6 +1064,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337303935212222}
   m_Mesh: {fileID: 4300014, guid: 19d68213e7a2ac944aa6ec08d246210c, type: 3}
+--- !u!65 &65685791969012180
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055725542307902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3425636, y: 15.585335, z: 2.4551716}
+  m_Center: {x: 0.07056999, y: 7.2926674, z: -0.23913288}
 --- !u!95 &95194704532829690
 Animator:
   serializedVersion: 3

@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 114425380129935714}
   - component: {fileID: 114777093754256968}
   - component: {fileID: 114064176932549440}
+  - component: {fileID: 65305312046146964}
   m_Layer: 0
   m_Name: ElfBow
   m_TagString: Enemy
@@ -2231,6 +2232,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1248892222076312}
   m_Mesh: {fileID: 4300052, guid: 9477a4a04a1accf4eab06a092762cb35, type: 3}
+--- !u!65 &65305312046146964
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213068859972806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3425636, y: 15.585335, z: 2.4551716}
+  m_Center: {x: 0.07056999, y: 7.2926674, z: -0.23913288}
 --- !u!95 &95984228993665862
 Animator:
   serializedVersion: 3

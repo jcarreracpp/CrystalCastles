@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
 			Debug.Log("Fireball");
 			fireball = Instantiate(fireballPrefab, wizardPos.position, wizardPos.rotation) as GameObject;
 			fireball.GetComponent<Rigidbody>().velocity = fireball.transform.forward * 150f;
+			Destroy(fireball, 2.0f);
             //VelocityChange or Impulse???
 			user = "";
 		}
