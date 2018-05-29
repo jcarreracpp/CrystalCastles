@@ -12,8 +12,7 @@ public class GameController : MonoBehaviour {
     public float angle;
 	public GameObject fireballPrefab;
 	GameObject fireball;
-	public Vector3 wizardPos;
-	public Rigidbody rb;
+	public Transform wizardPos;
     
 	// Use this for initialization
 	void Start () {
@@ -34,10 +33,9 @@ public class GameController : MonoBehaviour {
 		if (user.Contains("78965"))
 		{
 			Debug.Log("Fireball");
-			fireball = Instantiate(fireballPrefab, wizardPos, Quaternion.identity) as GameObject;
-			rb = fireball.GetComponent<Rigidbody>();
+			fireball = Instantiate(fireballPrefab, wizardPos.position, wizardPos.rotation) as GameObject;
+			fireball.GetComponent<Rigidbody>().velocity = fireball.transform.forward * 150f;
             //VelocityChange or Impulse???
-			rb.AddForceAtPosition(mousePosition, mousePosition, ForceMode.VelocityChange);
 			user = "";
 		}
 		if (user.Contains("236589")) {
