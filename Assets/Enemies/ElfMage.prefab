@@ -793,7 +793,7 @@ Animator:
   m_GameObject: {fileID: 1197834117331962}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f8eb48eeb8c64a143b4d8f7fe7cfcbf7, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17fa214a1c42ee3438503baec1785cb8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -873,9 +873,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
-  frequency: 5
-  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
-  speed: 500
+  frequency: 3
+  projectile: {fileID: 1703964684196372, guid: 13b6ceee66d77594cb4936d4ef5cb5cd, type: 2}
+  speed: 300
 --- !u!114 &114414222809631242
 MonoBehaviour:
   m_ObjectHideFlags: 1

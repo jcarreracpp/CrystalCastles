@@ -866,7 +866,7 @@ Animator:
   m_GameObject: {fileID: 1074001901432942}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 86b2ca8b7ec21c546bf97978e54f85ca, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81bd5ded43dbe394d9888e0671d30abb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d59b0a56af312b428b068251765a3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 8
+  stopDistance: 20
 --- !u!114 &114122010371919382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a2b509cfab4364f8e34e362f15f2ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAXHP: 20
+  MAXHP: 35
   myFaction: 3
   weakness: 4
   advantage: 0
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7ea56def33a8d4e9e70d6d83875e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 20
   frequency: 10
   damage: 8
 --- !u!114 &114459016138735070
