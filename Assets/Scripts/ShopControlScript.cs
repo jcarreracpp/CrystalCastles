@@ -34,9 +34,19 @@ public class ShopControlScript : MonoBehaviour {
     public Button chainBuyBtn;
     public Button healthBuyBtn;
 
+    public Text fireballBtnTxt;
+    public Text firewallBtnTxt;
+    public Text waveBtnTxt;
+    public Text lanceBtnTxt;
+    public Text mudWallBtnTxt;
+    public Text geoBtnTxt;
+    public Text airBtnTxt;
+    public Text chainBtnTxt;
+    public Text healthBtnTxt;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         moneyAmount = gManager.Money; // current money amount
         money_Text.text = "Money: " + moneyAmount.ToString() + " G";
         currentHealth = (int)gManager.returnHealth();
@@ -62,76 +72,75 @@ public class ShopControlScript : MonoBehaviour {
     public void chekcMagicStatus()
     {
         if((int)gManager.returnHealth() < 30)
-            healthBuyBtn.gameObject.SetActive(true);
+            healthBuyBtn.GetComponent<Button>().interactable = true;
 
         // Check money && inventory for fireball
         if (moneyAmount < 75)
         {
-            fireballPriceTxt.text = "N/A";
-            fireballBuyBtn.gameObject.SetActive(false);
+            fireballBtnTxt.GetComponentInChildren<Text>().text = "N/A";
+            fireballBuyBtn.GetComponent<Button>().interactable = false;
         }
 
         // Check money && inventory for firewall
         if (moneyAmount < 250)
         {
-            firewallPriceTxt.text = "N/A";
-            firewallBuyBtn.gameObject.SetActive(false);
+            firewallBuyBtn.GetComponent<Button>().interactable = false;
+            firewallBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for knockback wave
         if (moneyAmount < 100)
         {
-            wavePriceTxt.text = "N/A";
-            waveBuyBtn.gameObject.SetActive(false);
+            waveBuyBtn.GetComponent<Button>().interactable = false; 
+            waveBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for lance
         if (moneyAmount < 275)
         {
-            lancePriceTxt.text = "N/A";
-            lanceBuyBtn.gameObject.SetActive(false);
+            lanceBuyBtn.GetComponent<Button>().interactable = false;
+            lanceBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for mudWall
         if (moneyAmount < 200)
         {
-            mudWallPriceTxt.text = "N/A";
-            wallBuyBtn.gameObject.SetActive(false);
+            wallBuyBtn.GetComponent<Button>().interactable = false;
+            mudWallBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for geo
         if (moneyAmount < 300)
         {
-            geoPriceTxt.text = "N/A";
-            geoBuyBtn.gameObject.SetActive(false);
+            geoBuyBtn.GetComponent<Button>().interactable = false;
+            geoBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for air bomb
         if (moneyAmount < 125)
         {
-            airPriceTxt.text = "N/A";
-            airBuyBtn.gameObject.SetActive(false);
+            airBuyBtn.GetComponent<Button>().interactable = false;
+            airBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         // Check money && inventory for chain lightning
         if (moneyAmount < 275)
         {
-            chainPriceTxt.text = "N/A";
-            chainBuyBtn.gameObject.SetActive(false);
+            chainBuyBtn.GetComponent<Button>().interactable = false;
+            chainBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
         //check health
         if((int)gManager.returnHealth() == 30)
         {
-            healthPriceTxt.text = "FULL";
-            healthBuyBtn.gameObject.SetActive(false);
+            healthBuyBtn.GetComponent<Button>().interactable = false;
         }
 
         //check health money
         if (moneyAmount < 100)
         {
-            healthPriceTxt.text = "N/A";
             healthBuyBtn.gameObject.SetActive(false);
+            healthBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
         
     }

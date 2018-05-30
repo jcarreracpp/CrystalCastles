@@ -1107,6 +1107,15 @@ MonoBehaviour:
   airBuyBtn: {fileID: 1831491003}
   chainBuyBtn: {fileID: 1122359478}
   healthBuyBtn: {fileID: 374345838}
+  fireballBtnTxt: {fileID: 0}
+  firewallBtnTxt: {fileID: 0}
+  waveBtnTxt: {fileID: 0}
+  lanceBtnTxt: {fileID: 0}
+  mudWallBtnTxt: {fileID: 0}
+  geoBtnTxt: {fileID: 0}
+  airBtnTxt: {fileID: 0}
+  chainBtnTxt: {fileID: 0}
+  healthBtnTxt: {fileID: 0}
 --- !u!1001 &176045244
 Prefab:
   m_ObjectHideFlags: 0
@@ -1264,6 +1273,15 @@ MonoBehaviour:
   airBuyBtn: {fileID: 1831491003}
   chainBuyBtn: {fileID: 1122359478}
   healthBuyBtn: {fileID: 374345838}
+  fireballBtnTxt: {fileID: 545637604}
+  firewallBtnTxt: {fileID: 40909486}
+  waveBtnTxt: {fileID: 610347959}
+  lanceBtnTxt: {fileID: 407781988}
+  mudWallBtnTxt: {fileID: 1050935830}
+  geoBtnTxt: {fileID: 1436598586}
+  airBtnTxt: {fileID: 2079312354}
+  chainBtnTxt: {fileID: 2103291205}
+  healthBtnTxt: {fileID: 47543298}
 --- !u!4 &198630530
 Transform:
   m_ObjectHideFlags: 0
