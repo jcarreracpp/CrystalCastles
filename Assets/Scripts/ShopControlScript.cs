@@ -274,8 +274,7 @@ public class ShopControlScript : MonoBehaviour {
         moneyAmount -= 100; // not sure how much it will be
         // set health full
         gManager.buyHealth();
-        healthPriceTxt.text = "SOLD";
-        healthBuyBtn.gameObject.SetActive(false);
+        healthBuyBtn.GetComponent<Button>().interactable = false;
     }
     public void addMoney(int money)
     {
