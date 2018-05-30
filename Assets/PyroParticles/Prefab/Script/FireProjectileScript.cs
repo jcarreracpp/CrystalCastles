@@ -26,7 +26,7 @@ namespace DigitalRuby.PyroParticles
 
         [Tooltip("The radius of the explosion upon collision.")]
         public float ProjectileExplosionRadius = 50.0f;
-
+        
         [Tooltip("The force of the explosion upon collision.")]
         public float ProjectileExplosionForce = 50.0f;
 
