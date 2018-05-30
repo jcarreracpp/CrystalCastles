@@ -133,6 +133,7 @@ public class ShopControlScript : MonoBehaviour {
             healthPriceTxt.text = "N/A";
             healthBuyBtn.gameObject.SetActive(false);
         }
+        
     }
     
 

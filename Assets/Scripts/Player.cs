@@ -48,5 +48,10 @@ public class Player : MonoBehaviour {
     {
         health.CurrentVal += i;
     }
+
+    public void increaseHealth()
+    {
+        health.CurrentVal += 5;
+    }
     
 }

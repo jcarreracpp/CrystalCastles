@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalCastles", "Assembly-CSharp.csproj", "{66133409-4121-3AE8-2520-C137FBBE169F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalCastles", "Assembly-CSharp-Editor.csproj", "{CF4CC381-96B3-DB97-7611-09B1213C5F86}"
