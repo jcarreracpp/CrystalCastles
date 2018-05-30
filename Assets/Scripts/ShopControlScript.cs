@@ -80,12 +80,22 @@ public class ShopControlScript : MonoBehaviour {
             fireballBtnTxt.GetComponentInChildren<Text>().text = "N/A";
             fireballBuyBtn.GetComponent<Button>().interactable = false;
         }
+        else
+        { 
+            fireballBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+            fireballBuyBtn.GetComponent<Button>().interactable = true;
+        }
 
         // Check money && inventory for firewall
         if (moneyAmount < 250)
         {
             firewallBuyBtn.GetComponent<Button>().interactable = false;
             firewallBtnTxt.GetComponentInChildren<Text>().text = "N/A";
+        }
+        else
+        {
+            firewallBuyBtn.GetComponent<Button>().interactable = true;
+            firewallBtnTxt.GetComponentInChildren<Text>().text = "BUY";
         }
 
         // Check money && inventory for knockback wave
@@ -94,12 +104,22 @@ public class ShopControlScript : MonoBehaviour {
             waveBuyBtn.GetComponent<Button>().interactable = false; 
             waveBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
+        else
+        {
+            waveBuyBtn.GetComponent<Button>().interactable = true;
+            waveBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+        }
 
         // Check money && inventory for lance
         if (moneyAmount < 275)
         {
             lanceBuyBtn.GetComponent<Button>().interactable = false;
             lanceBtnTxt.GetComponentInChildren<Text>().text = "N/A";
+        }
+        else
+        {
+            lanceBuyBtn.GetComponent<Button>().interactable = true;
+            lanceBtnTxt.GetComponentInChildren<Text>().text = "BUY";
         }
 
         // Check money && inventory for mudWall
@@ -108,12 +128,22 @@ public class ShopControlScript : MonoBehaviour {
             wallBuyBtn.GetComponent<Button>().interactable = false;
             mudWallBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
+        else
+        { 
+            wallBuyBtn.GetComponent<Button>().interactable = true;
+            mudWallBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+        }
 
         // Check money && inventory for geo
         if (moneyAmount < 300)
         {
             geoBuyBtn.GetComponent<Button>().interactable = false;
             geoBtnTxt.GetComponentInChildren<Text>().text = "N/A";
+        }
+        else
+        {
+            geoBuyBtn.GetComponent<Button>().interactable = true;
+            geoBtnTxt.GetComponentInChildren<Text>().text = "BUY";
         }
 
         // Check money && inventory for air bomb
@@ -122,12 +152,22 @@ public class ShopControlScript : MonoBehaviour {
             airBuyBtn.GetComponent<Button>().interactable = false;
             airBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
+        else
+        {
+            airBuyBtn.GetComponent<Button>().interactable = true;
+            airBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+        }
 
         // Check money && inventory for chain lightning
         if (moneyAmount < 275)
         {
             chainBuyBtn.GetComponent<Button>().interactable = false;
             chainBtnTxt.GetComponentInChildren<Text>().text = "N/A";
+        }
+        else
+        {
+            chainBuyBtn.GetComponent<Button>().interactable = true;
+            chainBtnTxt.GetComponentInChildren<Text>().text = "BUY";
         }
 
        
@@ -137,6 +177,11 @@ public class ShopControlScript : MonoBehaviour {
             healthBuyBtn.GetComponent<Button>().interactable = false;
             healthBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
+        else
+        {
+            healthBuyBtn.GetComponent<Button>().interactable = true;
+            healthBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+        }
 
         //check health
         if ((int)gManager.returnHealth() == 30)
@@ -144,7 +189,11 @@ public class ShopControlScript : MonoBehaviour {
             healthBuyBtn.GetComponent<Button>().interactable = false;
             healthBtnTxt.GetComponentInChildren<Text>().text = "FULL";
         }
-
+        else
+        {
+            healthBuyBtn.GetComponent<Button>().interactable = true;
+            healthBtnTxt.GetComponentInChildren<Text>().text = "BUY";
+        }
     }
 
 
