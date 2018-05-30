@@ -130,21 +130,23 @@ public class ShopControlScript : MonoBehaviour {
             chainBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
 
-        //check health
-        if((int)gManager.returnHealth() == 30)
-        {
-            healthBuyBtn.GetComponent<Button>().interactable = false;
-        }
-
+       
         //check health money
         if (moneyAmount < 100)
         {
-            healthBuyBtn.gameObject.SetActive(false);
+            healthBuyBtn.GetComponent<Button>().interactable = false;
             healthBtnTxt.GetComponentInChildren<Text>().text = "N/A";
         }
-        
+
+        //check health
+        if ((int)gManager.returnHealth() == 30)
+        {
+            healthBuyBtn.GetComponent<Button>().interactable = false;
+            healthBtnTxt.GetComponentInChildren<Text>().text = "FULL";
+        }
+
     }
-    
+
 
     public void buyFireball()
     {
