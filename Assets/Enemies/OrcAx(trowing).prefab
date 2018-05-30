@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 13
   frequency: 3
-  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
+  projectile: {fileID: 1950329005924202, guid: 5240ea50ebe6f9a47a1ea027d6884f0c, type: 2}
   speed: 300
 --- !u!114 &114693300105509506
 MonoBehaviour:

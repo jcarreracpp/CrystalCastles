@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 4513095315785662}
   - component: {fileID: 33906635904465948}
   - component: {fileID: 23324783161081388}
+  - component: {fileID: 122897209491343664}
   m_Layer: 0
   m_Name: Cylinder_020
   m_TagString: Untagged
@@ -2275,7 +2276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 25
   frequency: 2
-  projectile: {fileID: 1186733771492486, guid: 84a3c88091a8b7d4684371671e1726ca, type: 2}
+  projectile: {fileID: 1850123641237260, guid: a270b99633f773d4d8b35979f41b3645, type: 2}
   speed: 1000
 --- !u!114 &114085798848599980
 MonoBehaviour:
@@ -2423,6 +2424,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!122 &122897209491343664
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820794260709522}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278255090
+  m_Size: 1
 --- !u!195 &195658124541941746
 NavMeshAgent:
   m_ObjectHideFlags: 1

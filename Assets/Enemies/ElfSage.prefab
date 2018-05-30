@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4781382674200226}
   - component: {fileID: 33285852071238386}
   - component: {fileID: 23904029230578998}
+  - component: {fileID: 122306977517574720}
   m_Layer: 0
   m_Name: Torus_004
   m_TagString: Untagged
@@ -298,6 +299,7 @@ GameObject:
   - component: {fileID: 4581850741381840}
   - component: {fileID: 33556706919538198}
   - component: {fileID: 23111974392799560}
+  - component: {fileID: 122238172948372630}
   m_Layer: 0
   m_Name: Sphere_005
   m_TagString: Untagged
@@ -668,8 +670,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100010, guid: 35fad9178ba43e74db34f1bf0b87cdda, type: 3}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1326,6 +1327,28 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!122 &122238172948372630
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946601893914984}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278247421
+  m_Size: 1
+--- !u!122 &122306977517574720
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368995297053756}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294965760
+  m_Size: 1
 --- !u!195 &195595254399125148
 NavMeshAgent:
   m_ObjectHideFlags: 1

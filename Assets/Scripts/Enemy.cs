@@ -96,8 +96,11 @@ public class Enemy : MonoBehaviour {
     }
 
 	void OnTriggerEnter(Collider other){
-		Debug.Log ("hit");
-		takeDamage (5.0f,0);
+        if (other.gameObject.tag == "FireBall")
+        {
+            Debug.Log("hit");
+            takeDamage(5.0f, 0);
+        }
 	}
     
 }
