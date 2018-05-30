@@ -10,8 +10,8 @@ public class GameController : MonoBehaviour {
     public Transform target;
     public Vector3 objectPosition;
     public float angle;
-	public GameObject fireballPrefab;
-	GameObject fireball;
+	public GameObject fireballPrefab, firewallPrefab;
+	GameObject fireball, firewall;
 	public Transform wizardPos;
     public AudioSource audioOut;
     AudioClip fireballSFX;
@@ -61,9 +61,12 @@ public class GameController : MonoBehaviour {
 			Debug.Log("Air Bomb");
             user = "";
         }
-		if (user.Contains("1258723698"))
+		//1258723698
+		if (user.Contains("123"))
         {
             Debug.Log("Firewall");
+			firewall = Instantiate(firewallPrefab, wizardPos.position, wizardPos.rotation) as GameObject;
+            //firewall.GetComponent<Rigidbody>().velocity = firewall.transform.forward * 150f;
             user = "";
         }
 		if (user.Contains("15986159863578435784"))
