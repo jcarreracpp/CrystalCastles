@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - sage target
+  - FireBall
   layers:
   - Default
   - TransparentFX
