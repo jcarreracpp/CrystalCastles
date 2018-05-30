@@ -14,11 +14,12 @@ public class NumpadHighlight : MonoBehaviour {
     public RawImage n7;
     public RawImage n8;
     public RawImage n9;
+    Color temp;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        temp = n1.color;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -63,7 +64,6 @@ public class NumpadHighlight : MonoBehaviour {
 
     IEnumerator BlinkPart(RawImage partBlink)
     {
-        Color temp = partBlink.color;
         partBlink.color = Color.red;
         yield return new WaitForSeconds(duration);
         partBlink.color = temp;
