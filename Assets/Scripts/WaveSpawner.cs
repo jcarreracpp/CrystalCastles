@@ -167,7 +167,7 @@ public class WaveSpawner : MonoBehaviour {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
 				}
 				startRoundBoxScript.setToOrc ();
-				startRoundBoxScript.setText ("Look at us. We are orcs with horns sticking out of our heads. We look evil... Prepare to die.");
+				startRoundBoxScript.setText ("We act like we look. Evilly!");
 			} else if (nextWave >= 2) {
 				/*
 				farmerChance = .5;
@@ -200,7 +200,7 @@ public class WaveSpawner : MonoBehaviour {
 					SpawnEnemy (farmers[Random.Range(0,3)]);
 				}
 				startRoundBoxScript.setToKnight ();
-				startRoundBoxScript.setText ("You are under arrest. There is no need for surrender. We'll be taking you dead.");
+				startRoundBoxScript.setText ("For crimes against the kingdom, the king has ordered your death!");
 			} else {
 				/*
 				farmerChance = 1;
@@ -211,7 +211,7 @@ public class WaveSpawner : MonoBehaviour {
 				*/
 				SpawnEnemy (farmers[Random.Range(0,3)]);
 				startRoundBoxScript.setToFarmer ();
-				startRoundBoxScript.setText ("Us farmers are angry! aAaAAaaAAAngry! We don't know why, but we're going to take it out on YOU!");
+				startRoundBoxScript.setText ("Get off my property!");
 			}
 
 			yield return new WaitForSeconds ( 1f/rate );

@@ -11,8 +11,8 @@ public class ShopControlScript : MonoBehaviour {
     int moneyAmount;
     int currentHealth;
     int [] soldMagics;
-    
 
+    public Player player;
     public Text money_Text;
     public Text fireballPriceTxt;
     public Text firewallPriceTxt;
@@ -47,15 +47,15 @@ public class ShopControlScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        moneyAmount = gManager.Money; // current money amount
-        money_Text.text = "Money: " + moneyAmount.ToString() + " G";
-        currentHealth = (int)gManager.returnHealth();
+        moneyAmount = player.Money; // current money amount
+        //money_Text.text = moneyAmount.ToString();
+        currentHealth = (int)player.returnHealth();
         soldMagics = new int[8];
         
         //Receive current magic sales status
         for (int i = 0; i < 8; i++)
         {
-            soldMagics[i] = gManager.returnMagic(i);
+            soldMagics[i] = player.returnMagic(i);
         }
 
     }
@@ -63,16 +63,10 @@ public class ShopControlScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         chekcMagicStatus();
-        gManager.Money = moneyAmount;
-
-
-        
     }
 
     public void chekcMagicStatus()
     {
-        if((int)gManager.returnHealth() < 30)
-            healthBuyBtn.GetComponent<Button>().interactable = true;
 
         // Check money && inventory for fireball
         if (moneyAmount < 75)
@@ -184,7 +178,7 @@ public class ShopControlScript : MonoBehaviour {
         }
 
         //check health
-        if ((int)gManager.returnHealth() == 30)
+        if ((int)player.returnHealth() == 30)
         {
             healthBuyBtn.GetComponent<Button>().interactable = false;
             healthBtnTxt.GetComponentInChildren<Text>().text = "FULL";
@@ -200,85 +194,95 @@ public class ShopControlScript : MonoBehaviour {
     public void buyFireball()
     {
         moneyAmount -= 75;
-        gManager.updateMagic(0);
+        player.updateMagic(0);
         // set fireball buy status to 1
         fireballPriceTxt.text = "SOLD";
         fireballBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyFirewall()
     {
         moneyAmount -= 250;
-        gManager.updateMagic(1);
+        player.updateMagic(1);
         // set firewall buy status to 1
         firewallPriceTxt.text = "SOLD";
         firewallBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyWave()
     {
         moneyAmount -= 200;
-        gManager.updateMagic(2);
+        player.updateMagic(2);
         // set wave buy status to 1
         wavePriceTxt.text = "SOLD";
         waveBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyLance()
     {
         moneyAmount -= 275;
-        gManager.updateMagic(3);
+        player.updateMagic(3);
         // set wave buy status to 1
         lancePriceTxt.text = "SOLD";
         lanceBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyWall()
     {
         moneyAmount -= 200;
-        gManager.updateMagic(4);
+        player.updateMagic(4);
         // set wave buy status to 1
         mudWallPriceTxt.text = "SOLD";
         wallBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyGeo()
     {
         moneyAmount -= 300;
-        gManager.updateMagic(5);
+        player.updateMagic(5);
         // set wave buy status to 1
         geoPriceTxt.text = "SOLD";
         geoBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyAir()
     {
         moneyAmount -= 125;
-        gManager.updateMagic(6);
+        player.updateMagic(6);
         // set wave buy status to 1
         airPriceTxt.text = "SOLD";
         airBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyChain()
     {
         moneyAmount -= 200;
-        gManager.updateMagic(7);
+        player.updateMagic(7);
         // set wave buy status to 1
         chainPriceTxt.text = "SOLD";
         chainBuyBtn.gameObject.SetActive(false);
+        this.money_Text.text = moneyAmount.ToString();
     }
 
     public void buyHealth()
     {
         moneyAmount -= 100; // not sure how much it will be
         // set health full
-        gManager.buyHealth();
+        player.buyHealth();
         healthBuyBtn.GetComponent<Button>().interactable = false;
+        this.money_Text.text = moneyAmount.ToString();
     }
     public void addMoney(int money)
     {
         moneyAmount += money;
+        this.money_Text.text = moneyAmount.ToString();
     }
 
 }

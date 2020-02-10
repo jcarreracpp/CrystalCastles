@@ -19,7 +19,7 @@ public class StartRoundBox : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		portraitWindow.GetComponent<Image> ().sprite = tutorialPortrait;
-		setText ("Controls:\n1. Aim with mouse\n2. Enter number combo for spells");
+		setText ("Made By: Bryce Metcalf, Jacob Kim, Jorge Carrera, David Escobedo, and William Kenji Kiplinger\nMusic: World of Warcraft Battle Music\nControls:\n1. Aim with mouse 2. Enter numpad combo for spells\nNOTE* Only fireball spell works in demo");
 	}
 
 	public void setToFarmer(){

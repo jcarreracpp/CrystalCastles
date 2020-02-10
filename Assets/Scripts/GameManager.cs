@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour {
     // indicator of bought magics
 
 
-	[SerializeField]
-	private Text moneyText;
+//	[SerializeField]
+//	private Text moneyText;
 	[SerializeField]
 	private Text waveText;
 	[SerializeField]
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		playerScript = playerObject.GetComponent<Player>();
-		Money = 0;
+		//Money = 0;
 		Wave = 1;
 		EnemyCount = 5;
 
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-
+/*
 	public int Money
 	{
 		get { return money; }
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 			this.moneyText.text = value.ToString(); 
 		}
 	}
-
+*/
 	public int Wave
 	{
 		get { return wave; }
